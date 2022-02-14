@@ -1,0 +1,32 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+{% if message %}
+<div>{{ message }}</div>
+{% endif %}
+
+<div class="row">
+    <div class="col-6"><img src="{% static 'mail/signup.png' %}"></div>
+    <div class="col-6 text-center align-center">
+        <h2>Register</h2>
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <div class="input-group">
+                <input class="text-input" type="email" name="email" placeholder="Email Address">
+            </div>
+            <div class="input-group">
+                <input class="text-input" type="password" name="password" placeholder="Password">
+            </div>
+            <div class="input-group">
+                <input class="text-input" type="password" name="confirmation" placeholder="Confirm Password">
+            </div>
+            <input class="btn" type="submit" value="Register">
+        </form>
+        Already have an account? <a href="{% url 'login' %}">Log In here.</a>
+    </div>
+    <div class="col-3"></div>
+</div>
+
+{% endblock %}

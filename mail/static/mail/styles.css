@@ -1,0 +1,258 @@
+:root {
+    --light-cornflower-blue: #8ecae6ff;
+    --blue-green: #219ebcff;
+    --prussian-blue: #023047ff;
+    --honey-yellow: #ffb703ff;
+    --orange: #fb8500ff;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue";
+    background-color: var(--light-cornflower-blue);
+    color: var(--prussian-blue);
+}
+
+a {
+    color: var(--blue-green);
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    background-color: var(--prussian-blue);
+    height: 1px;
+    border: none;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-3,
+.col-4,
+.col-6,
+.col-8,
+.col-9 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media screen and (min-width: 576px) {
+
+    img {
+        min-width: 100%;
+    }
+
+    .text-input {
+        max-width: 75%;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .col-3 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .col-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .col-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-8 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+
+    .col-9 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-center {
+    margin: auto;
+}
+
+.input-group {
+    margin: 5px;
+    text-align: center;
+}
+
+.text-input {
+    display: inline-block;
+    width: 100%;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: var(--prussian-blue);
+    border: 1px solid var(--blue-green);
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.text-input:hover {
+    border-color: var(--prussian-blue);
+}
+
+.text-input:focus {
+    border-color: var(--orange);
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--prussian-blue);
+    background-color: var(--honey-yellow);
+    border: 1px solid var(--honey-yellow);
+    border-radius: 40px;
+    padding: .375rem .75rem;
+    margin: 15px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    border: 3px solid var(--honey-yellow);
+}
+
+.btn-orange:hover {
+    background-color: var(--orange);
+    border: 2px solid var(--prussian-blue);
+}
+
+.btn:hover {
+    /* color: var(--honey-yellow); */
+    box-shadow: 5px 5px 0 0 var(--prussian-blue);
+}
+
+.btn-outline:hover {
+    background-color: var(--honey-yellow);
+}
+
+textarea {
+    min-height: 400px;
+}
+
+.mail,
+.mail-view {
+    background: var(--blue-green);
+    border-radius: 0 0 4px 4px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.mail:hover {
+    cursor: pointer;
+}
+
+.sender {
+    color: var(--honey-yellow);
+}
+
+.read {
+    color: var(--prussian-blue);
+}
+
+.subject {
+    display: inline-block;
+    width: 50%;
+}
+
+.time-stamp {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+.email-time-stamp {
+    color: var(--light-cornflower-blue);
+}
